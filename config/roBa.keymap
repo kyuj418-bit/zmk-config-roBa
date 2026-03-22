@@ -70,27 +70,25 @@
             label = "TO_LAYER_0";
         };
 
-//        mkp_exit_AML: mkp_exit_AML {
-//            compatible = "zmk,behavior-macro-one-param";
-//            #binding-cells = <1>;
-//            bindings =
-//                <&macro_press>,
-//                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-//                <&macro_pause_for_release>,
-//                <&macro_release>,
-//                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-//                <&macro_tap>,
-//                <&sl 4>;
-
-//            label = "MKP_EXIT_AML";
-//        };
-
-//        parenthesis: parenthesis {
-//            compatible = "zmk,behavior-macro";
-//            #binding-cells = <0>;
-//            bindings = <&kp LANG_HANJA &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
-//            label = "parenthesis";
-//        };
+        //        mkp_exit_AML: mkp_exit_AML {
+        //            compatible = "zmk,behavior-macro-one-param";
+        //            #binding-cells = <1>;
+        //            bindings =
+        //                <&macro_press>,
+        //                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+        //                <&macro_pause_for_release>,
+        //                <&macro_release>,
+        //                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+        //                <&macro_tap>,
+        //                <&sl 4>;
+        //            label = "MKP_EXIT_AML";
+        //        };
+        //        parenthesis: parenthesis {
+        //            compatible = "zmk,behavior-macro";
+        //            #binding-cells = <0>;
+        //            bindings = <&kp LANG_HANJA &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
+        //            label = "parenthesis";
+        //        };
     };
 
     behaviors {
@@ -104,14 +102,16 @@
         };
 
         // 新しいスクロール動作の追加
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN> ,  <&msc SCRL_UP>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             // 追加: スクロールのタップ時間を設定 (20ms)
+
             tap-ms = <20>;
         };
-
     };
 
     keymap {
@@ -121,11 +121,11 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp TAB                     &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANG1  &lt 2 SPACE  &lt_to_layer_0 6 LANG2      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         SYMBOLS {
