@@ -156,10 +156,10 @@
 
         SYMBOLS {
             bindings = <
-&trans  &kp SQT          &kp JP_LPAREN  &kp JP_RPAREN     &kp MINUS                         &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_DQUOTE     &kp JP_AT      &kp JP_UNDERSCORE
-&trans  &kp DOLLAR       &kp PERCENT    &kp JP_AMPERSAND  &kp JP_CARET  &trans      &trans  &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_QUOTE      &kp SEMICOLON  &kp JP_COLON
-&trans  &kp EXCLAMATION  &kp JP_DQUOTE  &kp POUND         &kp JP_PIPE   &trans      &trans  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_BACKQUOTE  &kp FSLH       &kp JP_YEN
-&trans  &trans           &trans         &trans            &trans        &trans      &trans  &trans                                                             &kp JP_TILDE
+&trans          &kp SQT          &kp JP_LPAREN  &kp JP_RPAREN     &kp MINUS                         &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_DQUOTE     &kp JP_AT      &kp JP_UNDERSCORE
+&trans          &kp DOLLAR       &kp PERCENT    &kp JP_AMPERSAND  &kp JP_CARET  &trans      &trans  &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_QUOTE      &kp SEMICOLON  &kp JP_COLON
+&kp LEFT_SHIFT  &kp EXCLAMATION  &kp JP_DQUOTE  &kp POUND         &kp JP_PIPE   &trans      &trans  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_BACKQUOTE  &kp FSLH       &kp JP_YEN
+&kp LCTRL       &trans           &kp LEFT_ALT   &trans            &trans        &trans      &trans  &trans                                                             &kp JP_TILDE
             >;
         };
 
@@ -168,7 +168,7 @@
 &kp MINUS                &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                               &kp F1   &kp F2   &kp F3   &kp F4           &kp F5
 &kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp PERCENT      &trans  &kp F6   &kp F7   &kp F8   &kp F9           &kp F10
 &mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp EQUAL        &trans  &kp F11  &kp F12  &kp F13  &kp PRINTSCREEN  &kp PAGE_UP
-&trans                   &trans        &trans        &trans        &trans        &trans           &trans  &trans                                      &kp PAGE_DOWN
+&kp LCTRL                &trans        &kp LEFT_ALT  &trans        &trans        &trans           &trans  &trans                                      &kp PAGE_DOWN
             >;
         };
 
@@ -177,7 +177,7 @@
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans    &trans          &kp UP_ARROW    &trans           &trans
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans    &trans          &trans          &trans           &trans
-&trans          &trans                  &kp LEFT_ALT    &trans                   &trans   &trans      &trans  &trans                                                     &trans
+&kp LCTRL       &trans                  &kp LEFT_ALT    &trans                   &trans   &trans      &trans  &trans                                                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
